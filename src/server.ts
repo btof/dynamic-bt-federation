@@ -26,6 +26,9 @@ const server: ApolloServer = new ApolloServer({
 app.use('*', cors());
 app.use(compression());
 
+/**
+ * Apply middleware for graphql
+ */
 server.applyMiddleware({ app, path: '/graphql' });
 
 /**
